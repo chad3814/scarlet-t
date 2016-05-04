@@ -1,0 +1,21 @@
+{
+    "manifest_version": 2,
+    "name": "Scarlet T",
+    "description": "Expose the supporters of Donald Trump.",
+    "version": "1.0",
+
+    "content_scripts": [ {
+        "css": [ "styles.css" ],
+        "js": [ "jquery-1.9.1.js", "jquery-highlight1.js", "names.js", "script.js" ],
+        "matches": [ "http://*/*", "https://*/*" ],
+        "run_at": "document_end"
+    } ],
+    "content_security_policy": "script-src 'self' https://ssl.google-analytics.com; object-src 'self'",
+    "icons": {
+        "128": "icon128.png",
+        "16": "icon16.png",
+        "48": "icon48.png"
+    },
+    "permissions": [ "http://opensecrets.org/*" ],
+    "web_accessible_resources": [ "scarlet-t-white.png" ]
+}
